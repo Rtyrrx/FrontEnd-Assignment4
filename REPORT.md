@@ -3,6 +3,7 @@
 **Student:** Bek Madias
 **Group:** SE_2430
 
+**link:** http://127.0.0.1:5500/index.html
 ---
 
 ## 🎯 Objective
@@ -124,3 +125,4 @@ Through this assignment, I learned how to:
 - Use **CSS media queries** to create responsive designs manually.
 - Use **Bootstrap's 12-column grid system** to build adaptive layouts faster.
 - Combine both approaches to achieve clean and modern responsive websites.
+
