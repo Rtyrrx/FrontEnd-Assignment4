@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 2 — Bootstrap Responsive Columns</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    /* Page-specific layout only */
+    .site-nav .inner { display:flex; align-items:center; gap:16px; max-width:1100px; margin:0 auto; padding:10px 16px; }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="inner">
+  <a class="brand" href="../index.html">Assignment Hub</a>
+      <span class="grow"></span>
+      <a class="link" href="../part1/task0-typography.html">Task 0</a>
+      <a class="link" href="../part1/task1-layout.html">Task 1</a>
+      <a class="link" href="./task2-bootstrap-grid.html">Task 2</a>
+      <a class="link" href="./task3-bootstrap-navbar.html">Task 3</a>
+      <a class="link" href="../part3/task4-portfolio.html">Task 4</a>
+    </div>
+  </header>
+  <div class="container py-4">
+    <h1 class="h4 mb-4 animate-in">Bootstrap Responsive Columns (Task 2)</h1>
+    <div class="row g-3">
+      <!-- Each column: mobile col-12, tablet col-md-6 (two per row), desktop col-lg-4 (three per row) -->
+      <div class="col-12 col-md-6 col-lg-4">
+  <div class="card h-100 p-3 reveal">
+          <h2 class="h5">Column 1</h2>
+          <p class="mb-0">Stacks on mobile, two per row on tablets, three equal parts on desktop.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+  <div class="card h-100 p-3 reveal">
+          <h2 class="h5">Column 2</h2>
+          <p class="mb-0">Using Bootstrap 12-column grid: 12/12, 6/12, 4/12 widths by breakpoint.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+  <div class="card h-100 p-3 reveal">
+          <h2 class="h5">Column 3</h2>
+          <p class="mb-0">On md, this will wrap to a second row automatically.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3 d-flex gap-3">
+      <a class="link link-underline" href="../part1/task1-layout.html">← Prev: Task 1</a>
+      <span class="text-secondary">|</span>
+      <a class="link link-underline" href="../index.html">Back to Hub</a>
+      <span class="text-secondary">|</span>
+      <a class="link link-underline" href="./task3-bootstrap-navbar.html">Next: Task 3 →</a>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

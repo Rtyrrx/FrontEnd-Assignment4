@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment Hub</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="./assets/styles.css">
+  <style>
+    /* Page-specific layout only; visual theme is in styles.css */
+    .site-nav .inner { display:flex; align-items:center; gap:16px; max-width:1100px; margin:0 auto; padding:12px 16px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    h1 { font-size: 1.6rem; margin: 0 0 .75rem; }
+    p { margin: 0 0 1rem; }
+  </style>
+</head>
+<body>
+  <header class="site-nav animate-in">
+    <div class="inner">
+  <a class="brand" href="./index.html">Assignment Hub</a>
+      <span class="grow"></span>
+      <a class="link" href="./part1/task0-typography.html">Task 0</a>
+      <a class="link" href="./part1/task1-layout.html">Task 1</a>
+      <a class="link" href="./part2/task2-bootstrap-grid.html">Task 2</a>
+      <a class="link" href="./part2/task3-bootstrap-navbar.html">Task 3</a>
+      <a class="link" href="./part3/task4-portfolio.html">Task 4</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card animate-in">
+      <h1>Responsive Design & Bootstrap — Assignment Hub</h1>
+      <p class="muted">Jump to any task below. Use the top bar to navigate between pages.</p>
+      <div class="grid" style="margin-top:12px;">
+        <a class="tile reveal" href="./part1/task0-typography.html">
+          <strong>Part 1 — Task 0</strong>
+          <div class="muted">Responsive Typography (Media Queries only)</div>
+        </a>
+        <a class="tile reveal" href="./part1/task1-layout.html">
+          <strong>Part 1 — Task 1</strong>
+          <div class="muted">Responsive Layout (Media Queries only)</div>
+        </a>
+        <a class="tile reveal" href="./part2/task2-bootstrap-grid.html">
+          <strong>Part 2 — Task 2</strong>
+          <div class="muted">Bootstrap 12-column Grid</div>
+        </a>
+        <a class="tile reveal" href="./part2/task3-bootstrap-navbar.html">
+          <strong>Part 2 — Task 3</strong>
+          <div class="muted">Bootstrap Navbar</div>
+        </a>
+        <a class="tile reveal" href="./part3/task4-portfolio.html">
+          <strong>Part 3 — Task 4</strong>
+          <div class="muted">Responsive Portfolio (Bootstrap + Media Queries)</div>
+        </a>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./assets/site.js"></script>
+</body>
+</html>

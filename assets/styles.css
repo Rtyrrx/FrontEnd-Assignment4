@@ -1,0 +1,111 @@
+/* Modern Light Creative Studio Styles */
+:root {
+  --bg: #f7f8fa;
+  --panel: #ffffff;
+  --card: #ffffff;
+  --card-2: #f3f6fa;
+  --text: #23272f;
+  --muted: #6b7280;
+  --accent: #4f8cff;
+  --accent-2: #a78bfa;
+  --border: rgba(60, 80, 180, 0.12);
+  --shadow: 0 4px 24px rgba(80,120,200,0.08), 0 1.5px 6px rgba(80,120,200,0.04);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #f7f8fa 0%, #edf3ff 100%);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Site-wide top nav (non-Bootstrap pages) */
+.site-nav {
+  position: sticky; top: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.85);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(80,120,200,0.04);
+}
+.site-nav .inner {
+  display: flex; align-items: center; gap: 16px;
+  max-width: 1200px; margin: 0 auto; padding: 10px 16px;
+}
+.site-nav .brand {
+  color: var(--accent); font-weight: 800; letter-spacing: .3px; text-decoration: none;
+}
+.site-nav a.link { color: var(--text); text-decoration: none; opacity: .85; transition: opacity .2s, color .2s; font-weight: 500; }
+.site-nav a.link:hover { opacity: 1; color: var(--accent); }
+.grow { flex: 1; }
+
+/* Bootstrap navbar (light theme) */
+.navbar {
+  background: rgba(255,255,255,0.9) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(80,120,200,0.04);
+}
+.navbar .navbar-brand { color: var(--accent) !important; font-weight: 700; letter-spacing: .3px; }
+.navbar .nav-link { color: rgba(35,39,47,0.85) !important; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: var(--accent) !important; }
+
+/* Cards, tiles, boxes */
+.card, .tile, .box {
+  background: linear-gradient(160deg, var(--card), var(--card-2));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: box-shadow .18s, border-color .18s, background .18s;
+}
+.card, .box { padding: 20px 24px; }
+.tile { display:block; padding: 16px; text-decoration: none; color: var(--text); }
+.card:hover, .tile:hover, .box:hover {
+  box-shadow: 0 8px 32px rgba(80,120,200,0.13), 0 2px 8px rgba(80,120,200,0.06);
+  border-color: var(--accent);
+}
+
+/* Links with subtle underline animation */
+.link-underline { position: relative; text-decoration: none; color: var(--text); }
+.link-underline::after {
+  content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0); transform-origin: left; transition: transform .25s cubic-bezier(.4,0,.2,1);
+}
+.link-underline:hover::after { transform: scaleX(1); }
+
+/* Utility */
+.container-narrow { max-width: 900px; margin: 0 auto; padding: 24px; }
+.container-wide { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.muted { color: var(--muted); }
+.accent { color: var(--accent); }
+.tagline { color: var(--muted); }
+.btn-ghost {
+  display: inline-flex; align-items:center; gap:8px; padding: 10px 18px;
+  border-radius: 12px; border: 1px solid var(--border); color: var(--text);
+  text-decoration: none; background: transparent;
+  transition: border-color .2s, background .2s, color .2s, transform .05s; font-weight: 500;
+}
+.btn-ghost:hover { border-color: var(--accent); background: rgba(79,140,255,0.07); color: var(--accent); }
+.btn-ghost:active { transform: translateY(1px); }
+
+/* Animation helpers */
+.animate-in { opacity: 0; transform: translateY(12px); }
+.reveal { opacity: 0; transform: translateY(16px); }
+
+/* Responsive typography baseline */
+h1 { line-height: 1.2; font-weight: 700; color: #23272f; }
+h2 { line-height: 1.25; font-weight: 600; color: #2d3340; }
+
+@media (min-width: 576px) {
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.3rem; }
+}
+@media (min-width: 992px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.45rem; }
+}

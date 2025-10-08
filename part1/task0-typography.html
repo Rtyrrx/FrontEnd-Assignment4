@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task 0 — Responsive Typography</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        /* Page-specific layout + type scale only; visuals come from styles.css */
+        .site-nav .inner { display:flex; align-items: center; gap:16px; max-width: 900px; margin: 0 auto; padding: 10px 16px; }
+        .wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
+        .card { backdrop-filter: blur(8px); padding: 20px 24px; }
+
+        /* Mobile-first font sizes */
+        body {
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            line-height: 1.2;
+            margin: 0 0 0.75rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            line-height: 1.3;
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        p { font-size: 1rem; line-height: 1.65; margin: 0 0 0.85rem; }
+
+        /* Tablet ≥ 576px */
+        @media (min-width: 576px) {
+            body {
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.375rem;
+            }
+
+            p {
+                font-size: 1.0625rem;
+            }
+        }
+
+        /* Desktop ≥ 992px */
+        @media (min-width: 992px) {
+            body {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.125rem;
+            }
+        }
+
+        .accent { color: var(--accent); }
+    </style>
+</head>
+
+<body>
+    <header class="site-nav animate-in">
+        <div class="inner">
+            <a class="brand" href="../index.html">Assignment Hub</a>
+            <span class="grow"></span>
+            <a class="link" href="./task0-typography.html">Task 0</a>
+            <a class="link" href="./task1-layout.html">Task 1</a>
+            <a class="link" href="../part2/task2-bootstrap-grid.html">Task 2</a>
+            <a class="link" href="../part2/task3-bootstrap-navbar.html">Task 3</a>
+            <a class="link" href="../part3/task4-portfolio.html">Task 4</a>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="card animate-in">
+            <h1>Responsive Typography <span class="accent">(Task 0)</span></h1>
+            <p>This page demonstrates changing font sizes using CSS media queries for mobile, tablet, and desktop
+                breakpoints.</p>
+            <h2>Why responsive type?</h2>
+            <p class="reveal">Readable typography improves UX across devices. On larger screens, we can comfortably
+                increase type size and spacing. On smaller screens, we keep sizes compact to fit content and maintain
+                legibility.</p>
+            <h2>Breakpoints used</h2>
+            <p class="reveal">Tablet at 576px and Desktop at 992px. These match common Bootstrap breakpoints but are
+                applied here using plain CSS only.</p>
+            <div style="margin-top: 16px; display:flex; gap:12px;">
+                <a class="accent link-underline" href="../index.html">← Back to Hub</a>
+                <span style="opacity:.7;">|</span>
+                <a class="accent link-underline" href="./task1-layout.html">Next: Task 1 →</a>
+            </div>
+        </div>
+    </div>
+    <!-- Optional Three.js background canvas -> add if wanted
+  <canvas id="bg-canvas" style="position:fixed; inset:0; width:100%; height:100%; z-index:-1;"></canvas>
+  -->
+
+    <!-- GSAP and plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <!-- Three.js (optional) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script> -->
+    <script src="../assets/site.js"></script>
+    <!-- <script src="../assets/three-bg.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 1 — Responsive Layout with Media Queries</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    /* Page-specific layout only; theme from styles.css */
+    .site-nav .inner { display:flex; align-items:center; gap:16px; max-width:1100px; margin:0 auto; padding:10px 16px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    h1 { font-size: 1.5rem; margin: 0 0 1rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr; /* Mobile: one per row */
+      gap: 16px;
+    }
+
+    .box {
+      /* visuals provided by .box in styles.css; spacing here */
+      border-radius: 16px;
+      padding: 24px;
+      min-height: 120px;
+    }
+
+    .box h2 { margin: 0 0 0.5rem; font-size: 1.125rem; }
+    .box p  { margin: 0; line-height: 1.6; }
+
+    /* Tablet ≥ 576px: two per row */
+    @media (min-width: 576px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Desktop ≥ 992px: three per row */
+    @media (min-width: 992px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav animate-in">
+    <div class="inner">
+      <a class="brand" href="../index.html">Assignment Hub</a>
+      <span class="grow"></span>
+      <a class="link" href="./task0-typography.html">Task 0</a>
+      <a class="link" href="./task1-layout.html">Task 1</a>
+      <a class="link" href="../part2/task2-bootstrap-grid.html">Task 2</a>
+      <a class="link" href="../part2/task3-bootstrap-navbar.html">Task 3</a>
+      <a class="link" href="../part3/task4-portfolio.html">Task 4</a>
+    </div>
+  </header>
+  <div class="wrap">
+    <h1 class="animate-in">Responsive Layout with Media Queries (Task 1)</h1>
+    <div class="grid">
+      <div class="box">
+        <h2>Box 1</h2>
+        <p class="reveal">On mobile: stacked. On tablet: two per row. On desktop: three per row.</p>
+      </div>
+      <div class="box">
+        <h2>Box 2</h2>
+        <p class="reveal">Pure CSS media queries; no Bootstrap here.</p>
+      </div>
+      <div class="box">
+        <h2>Box 3</h2>
+        <p class="reveal">Resize your browser to see the layout respond.</p>
+      </div>
+    </div>
+    <div style="margin-top: 16px; display:flex; gap:12px;">
+      <a class="link-underline" style="color:#93c5fd;" href="./task0-typography.html">← Prev: Task 0</a>
+      <span style="opacity:.7;">|</span>
+      <a class="link-underline" style="color:#93c5fd;" href="../index.html">Back to Hub</a>
+      <span style="opacity:.7;">|</span>
+      <a class="link-underline" style="color:#93c5fd;" href="../part2/task2-bootstrap-grid.html">Next: Task 2 →</a>
+    </div>
+  </div>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
